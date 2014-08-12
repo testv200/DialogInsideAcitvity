@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.curium.testandroid.MainActivity" >
+
+    <!-- all your activity's existing code goes here -->
+
+    <RelativeLayout
+        android:id="@+id/all_activity_content_id"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FF0000" >
+
+        <ToggleButton
+            android:id="@+id/toggle_dialog_box_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textOff="@string/show_dialog"
+            android:textOn="@string/hide_dialog" />
+    </RelativeLayout>
+
+    <!-- translucent black background behind the dialog -->
+
+    <View
+        android:id="@+id/black_layer_id"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.6"
+        android:background="@android:color/black"
+        android:visibility="gone" />
+
+    <!-- your dialog layout -->
+
+    <RelativeLayout
+        android:id="@+id/dialog_id"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="#00BFFF"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/dialog_title_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:text="@string/dialog_title"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_title_id"
+            android:text="@string/dialog_description" />
+    </RelativeLayout>
+
+</RelativeLayout>
