@@ -1,2 +1,4 @@
 TestAndroid/bin/*
 TestAndroid/gen/*
+/TestAndroid/bin/*
+/TestAndroid/gen/*
